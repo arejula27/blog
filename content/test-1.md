@@ -12,3 +12,13 @@ date: 25-September-2020
 ### h3
 
 Normal text
+
+-   [ ] hola
+-   [x] caracola
+
+-   si
+-   no
+
+```bash
+kubectl get nodes
+```

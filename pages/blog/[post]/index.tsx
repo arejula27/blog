@@ -2,13 +2,25 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import React, { FC } from "react";
 import { ReaderMd } from "../../../utils";
 import { Post } from "../../../interfaces/";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
     post: Post;
 }
 
 export const PostPage: FC<Props> = ({ post }) => {
-    return <div>PostPage {post.metadata.title}</div>;
+    return (
+        <>
+            <div className="py-4">PostPage {post.metadata.title}</div>
+            <ReactMarkdown
+                className=" prose prose-stone"
+                rawSourcePos
+                skipHtml={true}
+            >
+                {post.content}
+            </ReactMarkdown>
+        </>
+    );
 };
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
