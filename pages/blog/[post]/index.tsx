@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { ReaderMd } from "../../../utils";
 import { Post } from "../../../interfaces/";
 import ReactMarkdown from "react-markdown";
+import { MainLayout } from "../../../components/layouts";
 
 interface Props {
     post: Post;
@@ -10,7 +11,7 @@ interface Props {
 
 export const PostPage: FC<Props> = ({ post }) => {
     return (
-        <>
+        <MainLayout>
             <div className="py-4">PostPage {post.metadata.title}</div>
             <ReactMarkdown
                 className=" prose prose-stone"
@@ -19,7 +20,7 @@ export const PostPage: FC<Props> = ({ post }) => {
             >
                 {post.content}
             </ReactMarkdown>
-        </>
+        </MainLayout>
     );
 };
 
