@@ -11,7 +11,7 @@ interface route {
 const routes: route[] = [
     { label: "Home", route: "/" },
     { label: "About", route: "/about" },
-    { label: "Blog", route: "/posts" },
+    { label: "Blog", route: "/blog" },
 ];
 
 export const Navbar = () => {
