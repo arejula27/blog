@@ -11,15 +11,15 @@ interface Props {
 
 const mdStyle =
     " prose  prose-2xl prose-headings:text-headline prose-p:text-base" +
-    " prose-pre:bg-stroke prose-p:text-paragraph prose-li:marker:text-tertiary" +
+    " prose-pre:bg-card-background prose-pre:text-stroke prose-p:text-paragraph prose-li:marker:text-tertiary" +
     " prose-h1:w-full prose-h1:border-b prose-h1:p-5 prose-h1:border-stroke" +
-    " prose-a:text-headline prose-a:font-bold  hover:prose-a:text-tertiary";
+    " prose-a:text-stroke prose-a:font-bold  hover:prose-a:text-tertiary";
 
 export const PostPage: FC<Props> = ({ post }) => {
     return (
         <MainLayout title={post.metadata.title}>
             <div className="flex justify-center bg-primary  py-10 w-full">
-                <div className="bg-card-background p-10  w-3/4 ">
+                <div className="bg- py-10  xs:px-6 sm:px-20  w-auto ">
                     <div className="text-tertiary  flex justify-end w-100% ">
                         {post.metadata.date}
                     </div>
