@@ -3,6 +3,7 @@ export interface PostData {
     date: string;
     description: string;
     slug: string;
+    tags: string[];
 }
 
 export interface Post {

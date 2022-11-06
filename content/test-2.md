@@ -1,6 +1,6 @@
 ---
 slug: blog-two
-title: My Second Blog
+title: My Second Blog with a very very large title My Second Blog with a very very large title My Second Blog with a very very large title My Second Blog with a very very large title
 description: This Description Of My Second Blog.
 date: 25-September-2020
 ---
