@@ -23,13 +23,7 @@ const MainLayout: FC<props> = ({ children, title }) => {
                 />
             </Head>
             <Navbar />
-            <main
-                style={{
-                    padding: "0px 20px",
-                }}
-            >
-                {children}
-            </main>
+            <main style={{}}>{children}</main>
         </>
     );
 };

@@ -9,17 +9,27 @@ interface Props {
     post: Post;
 }
 
+const mdStyle =
+    " prose  prose-2xl prose-headings:text-headline prose-p:text-base prose-pre:bg-stroke prose-p:text-paragraph prose-li:marker:text-tertiary";
+
 export const PostPage: FC<Props> = ({ post }) => {
     return (
         <MainLayout>
-            <div className="py-4">PostPage {post.metadata.title}</div>
-            <ReactMarkdown
-                className=" prose prose-stone"
-                rawSourcePos
-                skipHtml={true}
-            >
-                {post.content}
-            </ReactMarkdown>
+            <div className="flex justify-center bg-primary  py-10 ">
+                <div className=" bg-card-background p-10 ">
+                    <div className="text-tertiary  flex justify-end w-100% ">
+                        {post.metadata.date}
+                    </div>
+                    <ReactMarkdown
+                        className={mdStyle}
+                        rawSourcePos
+                        skipHtml={true}
+                    >
+                        {post.content}
+                    </ReactMarkdown>
+                </div>
+                {/* tags*/}
+            </div>
         </MainLayout>
     );
 };
@@ -45,7 +55,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     if (!post) {
         return {
             redirect: {
-                destination: "/",
+                destination: "/blog",
                 permanent: false,
             },
         };
